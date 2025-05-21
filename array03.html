@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我喜歡的飲料</title>
+    <style>
+        body {
+            font-family: 'Microsoft JhengHei', Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #ccc;
+            padding-bottom: 10px;
+        }
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <h2>我喜歡的飲料</h2>
+    
+    <script>
+        // 建立飲料陣列
+        let drinks = [
+            '卡布奇諾咖啡', 
+            '拿鐵咖啡', 
+            '珍珠奶茶', 
+            'mojito', 
+            '金萱雙Q', 
+            '葡萄汁', 
+            '高蛋白'
+        ];
+        
+        // 建立表格顯示飲料清單
+        document.write('<table>');
+        document.write('<tr><th>編號</th><th>飲料名稱</th></tr>');
+        
+        for(let i = 0; i < drinks.length; i++) {
+            document.write('<tr>');
+            document.write('<td>飲料' + (i + 1) + '</td>');
+            document.write('<td>' + drinks[i] + '</td>');
+            document.write('</tr>');
+        }
+        
+        document.write('</table>');
+        
+        // 控制台輸出陣列資訊
+        console.log('飲料清單:', drinks);
+        console.log('總共有 ' + drinks.length + ' 種飲料');
+    </script>
+</body>
+</html>

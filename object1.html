@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>物件練習</title>
+</head>
+<body>
+    <script>
+        // 建立物件
+        let man = new Object();
+        man.age = 18;
+        man.name = "小葳";
+        man.talk = function() {
+            // 使用 this
+            console.log("Hello 我是", this.name, "年齡", this.age);
+        };
+
+        // 使用物件
+        document.write("Hello 我是 ", man.name);
+
+        // 呼叫物件方法 (在 console 顯示詳細資訊)
+        man.talk();
+    </script>
+</body>
+</html>

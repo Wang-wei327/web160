@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>陣列練習 - 加總與平均</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .result {
+            margin: 15px 0;
+            padding: 10px;
+            background-color: #f0f0f0;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>成績陣列計算</h1>
+    
+    <script>
+        // 建立資料
+        let grades = [70, 50, 84];
+        grades.push(35);
+        grades.push(100);
+        
+        // 顯示原始陣列
+        document.write('<div class="result">');
+        document.write('<h3>原始陣列內容:</h3>');
+        document.write('<p>' + grades.join(', ') + '</p>');
+        document.write('</div>');
+        
+        // 計算加總
+        let sum = 0;
+        for (let i = 0; i < grades.length; i++) {
+            sum += grades[i];
+        }
+        
+        document.write('<div class="result">');
+        document.write('<h3>計算結果:</h3>');
+        document.write('<p>陣列元素數量: ' + grades.length + '</p>');
+        document.write('<p>成績總和: ' + sum + '</p>');
+        
+        // 計算平均
+        let average = sum / grades.length;
+        document.write('<p>平均成績: ' + average.toFixed(2) + '</p>');
+        document.write('</div>');
+        
+        // 控制台輸出
+        console.log('陣列內容:', grades);
+        console.log('元素數量:', grades.length);
+        console.log('成績總和:', sum);
+        console.log('平均成績:', average.toFixed(2));
+    </script>
+</body>
+</html>

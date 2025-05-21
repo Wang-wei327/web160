@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <title>JSON 示範</title>
+</head>
+<body>
+  <script>
+    // JSON 字串
+    const jsonString = '{"name": "小葳", "age": 18, "message": "Hello have a nice day"}';
+
+    // 將 JSON 字串轉成 JavaScript 物件
+    const man = JSON.parse(jsonString);
+
+    // 使用資料
+    document.write("Hello 我是 " + man.name + "<br>");
+    document.write(man.message + "<br>");
+  </script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>學生成績表</title>
+    <style>
+        body {
+            font-family: 'Microsoft JhengHei', Arial, sans-serif;
+            margin: 20px;
+        }
+        h2 {
+            color: #333;
+            border-bottom: 2px solid #666;
+            padding-bottom: 5px;
+        }
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            text-align: center;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #e6f7ff;
+        }
+    </style>
+</head>
+<body>
+    <h2>學生成績表</h2>
+    
+    <script>
+        // 建立二維陣列儲存學生資料
+        let students = [
+            ["姓名", "國文", "英文", "數學"],
+            ["王豪葳", 85, 88, 77],
+            ["林方芳", 99, 86, 89],
+            ["張玲", 75, 92, 86]
+        ];
+        
+        // 建立表格顯示成績
+        document.write('<table>');
+        
+        // 使用巢狀迴圈處理二維陣列
+        for(let i = 0; i < students.length; i++) {
+            document.write('<tr>');
+            
+            for(let j = 0; j < students[i].length; j++) {
+                // 第一列作為表頭
+                if(i === 0) {
+                    document.write('<th>' + students[i][j] + '</th>');
+                } else {
+                    document.write('<td>' + students[i][j] + '</td>');
+                }
+            }
+            
+            document.write('</tr>');
+        }
+        
+        document.write('</table>');
+        
+        // 控制台輸出陣列資訊
+        console.log("學生資料陣列:", students);
+    </script>
+</body>
+</html>
